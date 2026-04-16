@@ -7,7 +7,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [editingId, setEditingId] = useState(null); // ✅ AQUI
+  const [editingId, setEditingId] = useState(null);
 
   const fetchUsers = async () => {
     const res = await axios.get(`${API}/users`);
