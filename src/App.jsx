@@ -7,7 +7,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [editingId, setEditingId] = useState(null); // ✅ AQUI
+  const [editingId, setEditingId] = useState(null);
 
   const fetchUsers = async () => {
     const res = await axios.get(`${API}/users`);
@@ -62,7 +62,7 @@ function App() {
         {editingId ? "Atualizar" : "Criar"}
       </button>
 
-      <ul>
+      <ul className="users">
         {users.map((user) => (
           <li key={user._id}>
             {user.name} - {user.email}
